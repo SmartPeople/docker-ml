@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  tensorflow_test_gpu:
+    build: ./images/tensorflow
+    volumes: 
+      - ./images/tensorflow/code:/code
+    privileged: true
+    ports:
+      - "8888:8888"
+    command: python3 gpu_test.py

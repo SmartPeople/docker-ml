@@ -1,0 +1,18 @@
+services:
+  tensorflow_test_gpu:
+    build: ./images/tensorflow
+    command: python3 gpu_test.py
+    devices:
+    - /dev/nvidia0
+    - /dev/nvidiactl
+    - /dev/nvidia-uvm
+    ports:
+    - 8888:8888
+    privileged: true
+    volumes:
+    - ./images/tensorflow/code:/code
+    - nvidia_driver_375.66:/usr/local/nvidia:ro
+version: '2'
+volumes:
+  nvidia_driver_375.66:
+    external: true
