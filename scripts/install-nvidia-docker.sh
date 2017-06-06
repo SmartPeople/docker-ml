@@ -2,12 +2,16 @@
 
 if which nvidia-docker; then
 	echo "Nvidia-docker is already installed on this machine"
-	if ! docker volume ls | awk '{print $1}' | grep 'nvidia-docker'; then
-    	echo "Nvidia driver volume not found. Creating..."
-		sudo nvidia-docker run --rm nvidia/cuda nvidia-smi
-		echo "Check [docker volume ls]"
+	if systemctl show --property ActiveState docker | grep 'ActiveState=active'; then
+		if ! docker volume ls | awk '{print $1}' | grep 'nvidia-docker'; then
+	    	echo "Nvidia driver volume not found. Creating..."
+			sudo nvidia-docker run --rm nvidia/cuda nvidia-smi
+			echo "Check [docker volume ls]"
+		else
+			echo "Nvidia-docker and driver volume is ready"
+		fi
 	else
-		echo "Nvidia-docker and driver volume is ready"
+		echo "Cannot check volumes. Docker service is not running, start docker first"
 	fi
     exit 0
 fi
