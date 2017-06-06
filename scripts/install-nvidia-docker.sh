@@ -13,3 +13,6 @@ sudo -b nohup nvidia-docker-plugin > /tmp/nvidia-docker.log
 
 sudo systemctl start nvidia-docker
 sudo systemctl enable nvidia-docker
+
+# Create driver volume
+sudo nvidia-docker run nvidia/cuda nvidia-smi
