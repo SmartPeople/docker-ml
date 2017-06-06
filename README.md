@@ -20,8 +20,6 @@ Docker Compose <https://docs.docker.com/compose/install/>
 
 Nvidia Modprobe `sudo apt-get install nvidia-modprobe`
 
-nvidia-docker-plugin running on localhost:3476 (shoud be auto)
-
 Run:
 
 [install-nvidia-docker.sh](https://github.com/SmartPeople/docker-ml/blob/master/scripts/install-nvidia-docker.sh)
