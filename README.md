@@ -28,8 +28,11 @@ Run:
 
 [install-nvidia-docker-compose.sh](https://github.com/SmartPeople/docker-ml/blob/master/scripts/install-nvidia-docker-compose.sh)
 
+---
 
-Run `nvidia-docker run nvidia/cuda nvidia-smi` if driver volume is empty
+## Post-installation
+
+Check `docker volume ls` and run `nvidia-docker run nvidia/cuda nvidia-smi` if driver volume is empty
 
 ---
 ## Images
