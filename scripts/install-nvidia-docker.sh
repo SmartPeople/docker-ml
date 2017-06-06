@@ -1,7 +1,14 @@
 #!/bin/bash
 
 if which nvidia-docker; then
-    echo "Nvidia-docker already installed"
+	echo "Nvidia-docker is already installed on this machine"
+	if ! docker volume ls | awk '{print $1}' | grep 'nvidia-docker'; then
+    	echo "Nvidia driver volume not found. Creating..."
+		sudo nvidia-docker run nvidia/cuda nvidia-smi
+		echo "Check [docker volume ls]"
+	else
+		echo "Nvidia-docker and driver volume is ready"
+	fi
     exit 0
 fi
 
@@ -14,5 +21,7 @@ sudo -b nohup nvidia-docker-plugin > /tmp/nvidia-docker.log
 sudo systemctl start nvidia-docker
 sudo systemctl enable nvidia-docker
 
-# Create driver volume
-sudo nvidia-docker run nvidia/cuda nvidia-smi
+if ! docker volume ls | awk '{print $1}' | grep 'nvidia-docker'; then
+    echo "Creating nvidia driver volume..."
+	sudo nvidia-docker run nvidia/cuda nvidia-smi
+fi
