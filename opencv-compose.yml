@@ -1,0 +1,27 @@
+version: '2'
+
+services:
+  opencv_test_img:
+    build: ./images/tf-opencv
+    volumes: 
+      - ./images/tf-opencv/code:/code
+      - /tmp/.X11-unix:/tmp/.X11-unix:ro
+    environment:
+      - DISPLAY=$DISPLAY
+    privileged: true
+    ports:
+      - "8888:8888"
+    command: python3 img_test.py
+
+  opencv_test_webcam:
+    build: ./images/tf-opencv
+    volumes: 
+      - ./images/tf-opencv/code:/code
+      - /tmp/.X11-unix:/tmp/.X11-unix:ro
+      - /dev/video0:/dev/video0
+    environment:
+      - DISPLAY=$DISPLAY
+    privileged: true
+    ports:
+      - "8888:8888"
+    command: python3 webcam.py
