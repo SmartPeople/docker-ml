@@ -38,6 +38,7 @@ OpenCV 3.2.0 with CUDA support + Tensorflow-gpu 1.1.0 + Python2.7/3.5
 
 ## Create images and test gpu support
 
+Test GPU support in Tensorflow
 [tensorflow_gpu_test.sh](https://github.com/iraelaxis/docker-ml/blob/master/tensorflow_gpu_test.sh)
 
 
