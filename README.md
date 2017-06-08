@@ -23,10 +23,23 @@ Check `docker volume ls` and run `nvidia-docker run nvidia/cuda nvidia-smi` if d
 
 ### 8.0-cudnn5-devel-ubuntu16.04
 
-tensorflow 0.12.1-gpu-py3
+Tensorflow-gpu
+
+* rlxs/tensorflow:0.12.1-gpu-py2
+* rlxs/tensorflow:0.12.1-gpu-py3
+* rlxs/tensorflow:1.1.0-gpu-py2
+* rlxs/tensorflow:1.1.0-gpu-py3
+
+OpenCV 3.2.0 with CUDA support + Tensorflow-gpu 1.1.0 + Python2.7/3.5
+
+* rlxs/opencv-cuda-tf
 
 ---
 
 ## Create images and test gpu support
 
 [tensorflow_gpu_test.sh](https://github.com/iraelaxis/docker-ml/blob/master/tensorflow_gpu_test.sh)
+
+
+Docker OpenCV GUI test and webcam access
+[opencv_test.sh](https://github.com/SmartPeople/docker-ml/blob/master/opencv_test.sh)
