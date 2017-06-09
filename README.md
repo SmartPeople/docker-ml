@@ -44,3 +44,7 @@ Test GPU support in Tensorflow
 
 Docker OpenCV GUI test and webcam access
 [opencv_test.sh](https://github.com/SmartPeople/docker-ml/blob/master/opencv_test.sh)
+
+Tensorbox <https://github.com/TensorBox/TensorBox>
+[Download data](https://github.com/SmartPeople/docker-ml/blob/master/images/tensorbox/code/download_data.sh)
+[Start tensorboard and tensorbox](https://github.com/SmartPeople/docker-ml/blob/master/images/tensorbox/code/start_all.sh)
