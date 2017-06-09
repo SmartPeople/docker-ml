@@ -52,8 +52,8 @@ Docker OpenCV GUI test and webcam access
 
 Tensorbox <https://github.com/TensorBox/TensorBox>
 
-[Download data](https://github.com/SmartPeople/docker-ml/blob/master/images/tensorbox/code/download_data.sh)
+* Run [Download data](https://github.com/SmartPeople/docker-ml/blob/master/images/tensorbox/code/download_data.sh) to download video datasets for training
 
-[Start tensorboard and tensorbox](https://github.com/SmartPeople/docker-ml/blob/master/images/tensorbox/code/start_all.sh)
+* [Start tensorboard and tensorbox](https://github.com/SmartPeople/docker-ml/blob/master/images/tensorbox/code/start_all.sh)
 
 ---
