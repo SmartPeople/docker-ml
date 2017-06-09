@@ -15,12 +15,12 @@ cd ..
 echo "Extracting..."
 tar xf resnet_v1_101_2016_08_28.tar.gz
 
-#if [[ "$1" == '--travis_tiny_data' ]]; then
-#    wget --continue http://russellsstewart.com/s/brainwash_tiny.tar.gz
-#    tar xf brainwash_tiny.tar.gz
-#    echo "Done."
-#else
-#    wget --continue https://stacks.stanford.edu/file/druid:sx925dc9385/brainwash.tar.gz
-#    tar xf brainwash.tar.gz
-#    echo "Done."
-#fi
+if [[ "$1" == '--travis_tiny_data' ]]; then
+    wget --continue http://russellsstewart.com/s/brainwash_tiny.tar.gz
+    tar xf brainwash_tiny.tar.gz
+    echo "Done."
+else
+    wget --continue https://stacks.stanford.edu/file/druid:sx925dc9385/brainwash.tar.gz
+    tar xf brainwash.tar.gz
+    echo "Done."
+fi

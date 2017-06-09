@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  tensorbox_train:
+    build: ./images/tensorbox
+    volumes: 
+      - ./images/tensorbox/code/data:/code/data
+      - ./images/tensorbox/code/output:/code/output
+    privileged: true
+    ports:
+      - "8888:8888"
+      - "6006:6006"
+    #command: python -u train.py --hypes hypes/overfeat_rezoom.json --gpu 0 --logdir output
+    command: ./start_all.sh
