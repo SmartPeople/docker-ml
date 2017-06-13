@@ -1,9 +1,7 @@
-FROM rlxs/opencv-cuda-tf
+FROM rlxs/tf-cv2
 
 RUN pip install --upgrade pip \
-  && pip install --no-cache-dir jupyter runcython
-
-RUN python2.7 -m pip install --no-cache-dir Pillow opencv-python scipy
+  && pip install --no-cache-dir runcython Pillow
 
 ADD code ../code
 WORKDIR ../code
