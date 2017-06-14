@@ -6,6 +6,7 @@ services:
     volumes: 
       - ./images/tensorbox/code/data:/code/data
       - ./images/tensorbox/code/output:/code/output
+      - ./images/tensorbox/code/notebooks:/code/notebooks
     privileged: true
     ports:
       - "8888:8888"
