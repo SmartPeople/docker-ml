@@ -38,6 +38,10 @@ OpenCV 2.4.9.1 + Tensorflow-gpu 1.1.0 + Python2.7 (Jupyter/matplotlib/numpy/scip
 
 * rlxs/tf-cv2
 
+Torch 0.1.12_2 + Python2.7
+
+* rlxs/cuda-torch:py2
+
 ---
 
 ## Create images and test gpu support
