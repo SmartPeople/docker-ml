@@ -34,6 +34,10 @@ OpenCV 3.2.0 with CUDA support + Tensorflow-gpu 1.1.0 + Python2.7/3.5
 
 * rlxs/opencv-cuda-tf
 
+OpenCV 2.4.9.1 + Tensorflow-gpu 1.1.0 + Python2.7 (Jupyter/matplotlib/numpy/scipy)
+
+* rlxs/tf-cv2
+
 ---
 
 ## Create images and test gpu support
@@ -56,4 +60,5 @@ Tensorbox <https://github.com/TensorBox/TensorBox>
 
 * [Start tensorboard and tensorbox](https://github.com/SmartPeople/docker-ml/blob/master/images/tensorbox/code/start_all.sh)
 
+* [Test tensorbox on own dataset](https://github.com/SmartPeople/docker-ml/blob/master/images/tensorbox/code/notebooks/my_video.ipynb)
 ---
